@@ -1,0 +1,464 @@
+html,body,*{box-sizing: border-box;font-size:12px;margin:0;padding:0;font-weight:normal;font-family:"Microsoft YaHei";line-height:1;}
+html,body{width:100%;height:100%;}
+a{text-decoration:none;color:#333;}
+input,button{min-height:1px;}
+li {list-style-type: none;}
+i {font-style: normal;}
+/*******************通用的字体样式****************************/
+/*******************flex样式****************************/
+.ub-box{ display:-webkit-box;display:-webkit-flex;display: flex;}
+/*******************flex****************************/
+.ub-flex-4 { -webkit-flex: 4;flex: 4;-webkit-box-flex: 4 }
+.ub-flex-3 { -webkit-flex: 3;flex: 3;-webkit-box-flex: 3 }
+.ub-flex-2 { -webkit-flex: 2;flex: 2;-webkit-box-flex: 2 }
+.ub-flex-1 { -webkit-flex: 1;flex: 1;-webkit-box-flex: 1 }
+/*************垂直方向左对齐********/
+.ub-ver-left{-webkit-align-items:flex-start;align-items:flex-start;}
+/*************水平方向左对齐********/
+.ub-ver-h-left{justify-content:flex-start;}
+/*************水平垂直居中********/
+.ub-ver{align-items:center;justify-content: center;}
+/*************垂直居中********/
+.ub-ver-v{align-items:center;}
+/*************水平居中********/
+.ub-ver-h{justify-content: center;}
+/*************换行********/
+.ub-wrap{flex-wrap:wrap}
+/*************换行，第一行在下方********/
+.ub-wrap-reverse{flex-wrap:wrap-reverse}
+/*************垂直排列********/
+.ub-col{flex-direction:column}
+/*************水平排列********/
+.ub-row{flex-direction:row}
+/*************每个项目两侧的间隔相等********/
+.ub-around{justify-content:space-around}
+/*************两端对齐********/
+.ub-between{justify-content:space-between}
+/*************子元素底对齐********/
+.ub-align-self-end{align-self:flex-end}
+/*************子元素倒叙********/
+.ub-end{justify-content:flex-end}
+/*************子元素倒叙********/
+.ub-align-content-start{align-content: flex-start;}
+/*************子元素分配剩余空间********/
+.ub-grow{flex-grow:1}
+.ub-flex-end{align-items:flex-end}
+/*******************flex样式结束****************************/
+/*******************各个界面通用样式****************************/
+/****滚动条****/
+.z-scroll-type { overflow-y:auto; height: 100%;}
+.z-scroll-type::-webkit-scrollbar {width:6px;}
+.z-scroll-type::-webkit-scrollbar-track {border-radius:6px;background:#ddd;}
+.z-scroll-type::-webkit-scrollbar-thumb  {border-radius:6px;background:#1bc6bf;}
+/*********通用position**********/
+.z-relative{position:relative;}
+.z-absolute{position:absolute;}
+.z-fixed { position: fixed; }
+.z-select-none{-webkit-user-select:none;-moz-user-select:none;user-select:none;}
+.z-display-block{display:block;}
+.z-display-inlineBlock{display:inline-block;}
+.z-display-none{display:none;}
+.z-box-sizing-border{box-sizing:border-box}
+/*********按钮hover通用类**********/
+.z-button-hover {  transition: filter .2s ease-in; }
+.z-button-hover:hover { filter: brightness(1.1); }
+/*********通用宽度**********/
+.z-width-0{width:0;}
+.z-width-12-px{width:calc(12px);}
+.z-width-15-px{width:calc(15px);}
+.z-width-26-px{width:calc(26px);}
+.z-width-30-px{width:calc(30px);}
+.z-width-32-px{width:calc(32px);}
+.z-width-50-px{width:calc(50px);}
+.z-width-60-px{width:calc(60px);}
+.z-width-80-px{width:calc(80px);}
+.z-width-90-px{width:calc(90px);}
+.z-width-100-px{width:calc(100px);}
+.z-width-200-px{width:calc(200px);}
+.z-width-300-px{width:calc(300px);}
+.z-width-320-px{width:calc(320px);}
+.z-width-10-percent{width:10%;}
+.z-width-15-percent{width:15%;}
+.z-width-16-percent{width:16.66%;}
+.z-width-20-percent{width:20%;}
+.z-width-25-percent{width:25%;}
+.z-width-29-percent{width:29%;}
+.z-width-30-percent{width:30%;}
+.z-width-33-percent{width:33.33%;}
+.z-width-36-percent{width:36%;}
+.z-width-37-percent{width:37%;}
+.z-width-40-percent{width:40%;}
+.z-width-45-percent{width:45%;}
+.z-width-48-percent{width:48%;}
+.z-width-50-percent{width:50%;}
+.z-width-60-percent{width:60%;}
+.z-width-67-percent{width:67%;}
+.z-width-70-percent{width:70%;}
+.z-width-80-percent{width:80%;}
+.z-width-90-percent{width:90%;}
+.z-width-100-percent{width:100%;}
+.z-maxWidth-100-percent{max-width:100%;}
+.z-img-cover{object-fit:cover;}
+.z-img-contain{object-fit:contain;}
+/*********通用高度**********/
+.z-height-0{height:0;}
+.z-height-1-px{height:1px;}
+.z-height-10-px{height:calc(10px);}
+.z-height-11-px{height:calc(11px);}
+.z-height-12-px{height:calc(12px);}
+.z-height-15-px{height:calc(15px);}
+.z-height-20-px{height:calc(20px);}
+.z-height-30-px{height:calc(30px);}
+.z-height-40-px{height:calc(40px);}
+.z-height-50-px{height:calc(0px);}
+.z-height-60-px{height:calc(60px);}
+.z-height-70-px{height:calc(70px);}
+.z-height-80-px{height:calc(80px);}
+.z-height-90-px{height:calc(90px);}
+.z-height-95-px{height:calc(95px);}
+.z-height-100-px{height:calc(100px);}
+.z-height-130-px{height:calc(130px);}
+.z-height-150-px{height:calc(150px);}
+.z-height-200-px{height:calc(200px);}
+.z-height-300-px{height:calc(300px);}
+.z-height-500-px{height:calc(500px);}
+.z-minHeight-1-px{min-height:calc(1px)}
+.z-minHeight-30-px{min-height:calc(30px)}
+.z-minHeight-40-px{min-height:calc(40px)}
+.z-minHeight-50-px{min-height:calc(50px)}
+.z-minHeight-100-px{min-height:calc(100px)}
+.z-minHeight-150-px{min-height:calc(150px);}
+.z-minHeight-200-px{min-height:calc(200px);}
+.z-minHeight-300-px{min-height:calc(300px);}
+.z-minHeight-400-px{min-height:calc(400px);}
+.z-height-100-percent{height:100%;}
+.z-height-90-percent{height:90%;}
+.z-height-80-percent{height:80%;}
+.z-maxHeight-100-percent{max-height:100%;}
+/*********通用margin**********/
+.z-margin-all-auto{margin:auto;}
+.z-margin-all-0{margin:0;}
+.z-margin-all-10-px{margin: calc(10px);}
+.z-margin-v-5-px{margin:calc(5px) 0;}
+.z-margin-v-24-px{margin:calc(24px) 0;}
+.z-margin-v-20-px{margin:calc(20px) 0;}
+.z-margin-h-36-px{margin:0 calc(36px);}
+.z-margin-h-20-px{margin:0 calc(20px);}
+.z-margin-h-15-px{margin:0 calc(15px);}
+.z-margin-h-14-px{margin:0 calc(14px);}
+.z-margin-h-12-px{margin:0 calc(12px);}
+.z-margin-h-10-px{margin:0 calc(10px);}
+.z-margin-h-9-px{margin:0 calc(9px);}
+.z-margin-h-5-px{margin:0 calc(5px);}
+.z-margin-h-3-px{margin:0 calc(3px);}
+.z-margin-h-auto{margin:0 auto;}
+.z-margin-left-3-px{margin-left:calc(3px);} 
+.z-margin-left-4-px{margin-left:calc(4px);}
+.z-margin-left-5-px{margin-left:calc(5px);}
+.z-margin-left-6-px{margin-left:calc(6px);}
+.z-margin-left-8-px{margin-left:calc(8px);}
+.z-margin-left-10-px{margin-left:calc(10px);} 
+.z-margin-left-15-px{margin-left:calc(15px);}
+.z-margin-left-16-px{margin-left:calc(16px);}
+.z-margin-left-20-px{margin-left:calc(20px);}
+.z-margin-left-25-px{margin-left:calc(25px);}
+.z-margin-left-30-px{margin-left:calc(30px);}
+.z-margin-right-0-px{margin-right:0;}
+.z-margin-right-2-px{margin-right:calc(2px);}
+.z-margin-right-3-px{margin-right:calc(3px);}
+.z-margin-right-5-px{margin-right:calc(5px);}
+.z-margin-right-6-px{margin-right:calc(6px);}
+.z-margin-right-8-px{margin-right:calc(8px);} 
+.z-margin-right-10-px{margin-right:calc(10px);} 
+.z-margin-right-15-px{margin-right:calc(15px);}
+.z-margin-right-20-px{margin-right:calc(20px);}
+.z-margin-right-25-px{margin-right:calc(25px);}
+.z-margin-right-30-px{margin-right:calc(30px);}
+.z-margin-top-40-px{margin-top:calc(40px);}
+.z-margin-top-30-px{margin-top:calc(30px);}
+.z-margin-top-25-px{margin-top:calc(25px);}
+.z-margin-top-20-px{margin-top:calc(20px);}
+.z-margin-top-15-px{margin-top:calc(15px);}
+.z-margin-top-12-px{margin-top:calc(12px);}
+.z-margin-top-10-px{margin-top:calc(10px);}
+.z-margin-top-8-px{margin-top:calc(8px);}
+.z-margin-top-6-px{margin-top:calc(6px);}
+.z-margin-top-5-px{margin-top:calc(5px);}
+.z-margin-top-4-px{margin-top:calc(4px);}
+.z-margin-top-3-px{margin-top:calc(3px);}
+.z-margin-bottom-40-px{margin-bottom:calc(40px);}
+.z-margin-bottom-30-px{margin-bottom:calc(30px);}
+.z-margin-bottom-25-px{margin-bottom:calc(25px);}
+.z-margin-bottom-20-px{margin-bottom:calc(20px);}
+.z-margin-bottom-15-px{margin-bottom:calc(15px);}
+.z-margin-bottom-12-px{margin-bottom:calc(12px);}
+.z-margin-bottom-10-px{margin-bottom:calc(10px);}
+.z-margin-bottom-8-px{margin-bottom:calc(8px);} 
+.z-margin-bottom-6-px{margin-bottom:calc(6px);} 
+.z-margin-bottom-5-px{margin-bottom:calc(5px);} 
+.z-margin-bottom-3-px{margin-bottom:calc(3px);}
+.z-margin-bottom-1-px{margin-bottom:calc(1px);}
+.z-margin-all-auto{margin: auto;}
+/*********通用padding**********/
+.z-padding-all-0{padding:0;}
+.z-padding-all-4-px{padding:calc(4px);}
+.z-padding-all-5-px{padding:calc(5px);}
+.z-padding-all-8-px{padding:calc(8px);}
+.z-padding-all-10-px{padding:calc(10px);}
+.z-padding-all-15-px{padding:calc(15px);}
+.z-padding-all-20-px{padding:calc(20px);}
+.z-padding-all-30-px{padding:calc(30px);}
+.z-padding-v-35-px{padding:calc(35px) 0;}
+.z-padding-v-25-px{padding:calc(25px) 0;}
+.z-padding-v-20-px{padding:calc(20px) 0;}
+.z-padding-v-18-px{padding:calc(18px) 0;}
+.z-padding-v-15-px{padding:calc(15px) 0;}
+.z-padding-v-12-px{padding:calc(12px) 0;}
+.z-padding-v-10-px{padding:calc(10px) 0;}
+.z-padding-v-8-px{padding:calc(8px) 0;}
+.z-padding-v-5-px{padding:calc(5px) 0;}
+.z-padding-v-4-px{padding:calc(4px) 0;}
+.z-padding-v-2-px{padding:calc(2px) 0;}
+.z-padding-v-3-px{padding:calc(3px) 0;}
+.z-padding-h-3-px{padding:0 calc(3px);}
+.z-padding-h-4-px{padding:0 calc(4px);}
+.z-padding-h-5-px{padding:0 calc(5px);}
+.z-padding-h-7-px{padding:0 calc(7px);}
+.z-padding-h-8-px{padding:0 calc(8px);}
+.z-padding-h-10-px{padding:0 calc(10px);}
+.z-padding-h-15-px{padding:0 calc(15px);}
+.z-padding-h-20-px{padding:0 calc(20px);}
+.z-padding-h-30-px{padding:0 calc(30px);}
+.z-padding-h-35-px{padding:0 calc(35px);}
+.z-padding-left-1-px{padding-left:calc(1px);}
+.z-padding-left-2-px{padding-left:calc(2px);}
+.z-padding-left-5-px{padding-left:calc(5px);}
+.z-padding-left-6-px{padding-left:calc(6px);}
+.z-padding-left-7-px{padding-left:calc(7px);}
+.z-padding-left-10-px{padding-left:calc(10px);}
+.z-padding-left-15-px{padding-left:calc(15px);}
+.z-padding-left-20-px{padding-left:calc(2px);}
+.z-padding-left-25-px{padding-left:calc(25px);}
+.z-padding-left-30-px{padding-left:calc(30px);}
+.z-padding-right-7-px{padding-right:calc(7px);}
+.z-padding-right-10-px{padding-right:calc(10px);}
+.z-padding-right-20-px{padding-right:calc(20px);}
+.z-padding-top-1-px{padding-top:calc(1px);}
+.z-padding-top-4-px{padding-top:calc(4px);}
+.z-padding-top-5-px{padding-top:calc(5px);}
+.z-padding-top-6-px{padding-top:calc(6px);}
+.z-padding-top-7-px{padding-top:calc(7px);}
+.z-padding-top-8-px{padding-top:calc(8px);}
+.z-padding-top-10-px{padding-top:calc(10px);}
+.z-padding-top-12-px{padding-top:calc(12px);}
+.z-padding-top-15-px{padding-top:calc(15px);}
+.z-padding-bottom-2-px{padding-bottom:calc(2px);}
+.z-padding-bottom-4-px{padding-bottom:calc(4px);}
+.z-padding-bottom-5-px{padding-bottom:calc(5px);}
+.z-padding-bottom-8-px{padding-bottom:calc(8px);}
+.z-padding-bottom-10-px{padding-bottom:calc(10px);}
+.z-padding-bottom-15-px{padding-bottom:calc(15px);}
+.z-padding-bottom-20-px{padding-bottom:calc(20px);}
+/*********通用字体大小**********/
+.z-font-size-7{font-size:calc(7px);}
+.z-font-size-8{font-size:calc(8px);}
+.z-font-size-9{font-size:calc(9px);}
+.z-font-size-10{font-size:calc(10px);}
+.z-font-size-12{font-size:calc(12px);}
+.z-font-size-13{font-size:calc(13px);}
+.z-font-size-14{font-size:calc(14px);}
+.z-font-size-15{font-size:calc(15px);}
+.z-font-size-16{font-size:calc(16px);}
+.z-font-size-17{font-size:calc(17px);}
+.z-font-size-18{font-size:calc(18px);}
+.z-font-size-20{font-size:calc(20px);}
+.z-font-size-22{font-size:calc(22px);}
+.z-font-size-23{font-size:calc(23px);}
+.z-font-size-24{font-size:calc(24px);}
+.z-font-size-25{font-size:calc(25px);}
+.z-font-size-26{font-size:calc(26px);}
+.z-font-size-27{font-size:calc(27px);}
+.z-font-size-28{font-size:calc(28px);}
+.z-font-size-30{font-size:calc(30px);}
+.z-font-size-32{font-size:calc(32px);}
+.z-font-size-36{font-size:calc(36px);}
+.z-font-size-40{font-size:calc(40px);}
+.z-font-size-50{font-size:calc(50px);}
+.z-font-size-60{font-size:calc(60px);}
+/*********通用字间距**********/
+.letter-spacing-2 { letter-spacing:2px; }
+.letter-spacing-1 { letter-spacing:1px; }
+/*********通用字体宽度**********/
+.z-font-weight-bold{font-weight: bold;}
+/*********通用字体行高**********/
+.z-lineHeight-10{line-height:calc(1px);}
+.z-lineHeight-18{line-height:calc(18px);}
+.z-lineHeight-17{line-height:calc(17px);}
+.z-lineHeight-16{line-height:calc(16px);}
+.z-lineHeight-20{line-height:calc(20px);}
+.z-lineHeight-22{line-height:calc(22px);}
+.z-lineHeight-24{line-height:calc(24px);}
+.z-lineHeight-26{line-height:calc(26px);}
+.z-lineHeight-28{line-height:calc(28px);}
+.z-lineHeight-30{line-height:calc(30px);}
+.z-lineHeight-32{line-height:calc(32px);}
+.z-lineHeight-34{line-height:calc(34px);}
+.z-lineHeight-36{line-height:calc(36px);}
+.z-lineHeight-38{line-height:calc(38px);}
+.z-lineHeight-40{line-height:calc(40px);}
+/*********通用字体对齐**********/
+.z-textAlign-center{text-align:center;}
+.z-textAlign-justify{text-align:justify;}
+.z-textAlign-left{text-align:left;}
+.z-textAlign-right{text-align:right;}
+/*********通用字体首行缩进**********/
+.z-textIndent-2-percent{text-indent:2%;}
+.z-textIndent-5-percent{text-indent:5%;}
+.z-textIndent-7-percent{text-indent:7%;}
+/*********图片自适应**********/
+.z-img-maxWidth-100-percent{max-width:100%}
+/*允许在单词内换行*/
+.z-wordBreak-all{word-break:break-all;}
+/*元素周围轮廓*/
+.z-outline-none{outline:none;}
+/*元素边框样式*/
+.z-border-none{border:none;}
+.z-border-all-1-white{border:1px solid #fff;}
+.z-border-all-1-eee{border:1px solid #eee;}
+.z-border-all-1-ccc{border:1px solid #ccc;}
+.z-border-all-1-d7d7d7{border:1px solid #d7d7d7;}
+.z-border-all-1-2bb0a6{border:1px solid #2bb0a6;}
+.z-border-all-1-1bc6bf{border:1px solid #1bc6bf;}
+.z-border-left-1-white{border-left:1px solid #fff;}
+.z-border-left-1-d7d7d7{border-left:1px solid #d7d7d7;}
+.z-border-right-1-white{border-right:1px solid #fff;}
+.z-border-top-1-white{border-top:1px solid #fff;}
+.z-border-top-1-999{border-top:1px solid #999;}
+.z-border-top-0-5-999{border-top:0.5px solid #999;}
+.z-border-top-0-5-2bb0a6{border-top:0.5px solid #2bb0a6;}
+.z-border-top-1-d7d7d7{border-top:1px solid #d7d7d7;}
+.z-border-top-dotted-d7d7d7{border-top:1px dotted #d7d7d7;}
+.z-border-top-dashed-d7d7d7{border-top:1px dashed #d7d7d7;}
+.z-border-bottom-1-d7d7d7{border-bottom:1px solid #d7d7d7;}
+.z-border-bottom-1-ddd{border-bottom:1px solid #ddd;}
+.z-border-bottom-1-white{border-bottom:1px solid #fff;}
+.z-border-bottom-1-eee{border-bottom:1px solid #eee;}
+.z-border-bottom-1-grey{border-bottom:1px solid #ccc;}
+.z-border-bottom-1-999{border-bottom:1px solid #999;}
+.z-border-bottom-dashed-d7d7d7{border-bottom:0.5px dashed #d7d7d7;}
+.z-border-bottom-dotted-d7d7d7{border-bottom:1px dotted #d7d7d7;}
+.z-border-left-1-grey{border-left:1px solid #ccc;}
+.z-border-left-0-5-d7d7d7{border-left:0.5px solid #d7d7d7;}
+.z-border-left-0-5-fff{border-left:0.5px solid #fff;}
+.z-border-left-1-d7d7d7{border-left:1px solid #d7d7d7;}
+.z-border-h-0-5-d7d7d7{border-right:0.5px solid #d7d7d7;border-left:0.5px solid #d7d7d7;}
+.z-border-h-0-5-2bb0a6{border-right:0.5px solid #2bb0a6;border-left:0.5px solid #2bb0a6;}
+.z-border-right-0-5-2bb0a6{border-right:0.5px solid #2bb0a6;}
+.z-border-right-0-5-d7d7d7{border-right:0.5px solid #d7d7d7;}
+.z-border-right-1-d7d7d7{border-right:1px solid #d7d7d7;}
+.z-border-right-1-grey{border-right:1px solid #ccc;}
+.z-border-top-1-grey{border-top:1px solid #ccc;}
+/*元素边框圆弧样式*/
+.z-border-radius-50-percent{border-radius:50%;}
+.z-border-radius-2{border-radius:2px;}
+.z-border-radius-3{border-radius:3px;}
+.z-border-radius-4{border-radius:4px;}
+.z-border-radius-5{border-radius:5px;}
+.z-border-radius-6{border-radius:6px;}
+.z-border-radius-8{border-radius:8px;}
+.z-border-radius-10{border-radius:10px;}
+.z-border-radius-12{border-radius:12px;}
+.z-border-radius-15{border-radius:15px;}
+.z-border-radius-20{border-radius:20px;}
+.z-border-radius-32{border-radius:32px;}
+.z-border-radius-10-top-both{border-radius:10px 10px 0 0;}
+.z-border-radius-10-left-both{border-radius:10px 0 0 10px;}
+.z-border-radius-10-right-both{border-radius:0 10px 10px 0;}
+.z-border-radius-10-left-top{border-radius:10px 0 0 0;}
+.z-border-radius-10-right-top{border-radius:0 10px 0 0;}
+/*圆形样式*/
+.z-circle{border-radius:50%;}
+.z-circle-20{width:20px;height:20px;border-radius:50%;}
+.z-circle-30{width:30px;height:30px;border-radius:50%;}
+.z-circle-40{width:40px;height:40px;border-radius:50%;}
+.z-circle-50{width:50px;height:50px;border-radius:50%;}
+.z-circle-60{width:60px;height:60px;border-radius:50%;}
+.z-circle-70{width:70px;height:70px;border-radius:50%;}
+.z-circle-80{width:80px;height:80px;border-radius:50%;}
+.z-circle-100{width:100px;height:100px;border-radius:50%;}
+.z-circle-120{width:120px;height:120px;border-radius:50%;}
+.z-circle-150{width:150px;height:150px;border-radius:50%;}
+.z-circle-200{width:200px;height:200px;border-radius:50%;}
+/********css3 filter样式*****/
+.z-filter-blur-1{-webkit-filter:blur(1px);}
+.z-filter-blur-2{-webkit-filter:blur(2px);}
+.z-filter-blur-3{-webkit-filter:blur(3px);}
+.z-filter-blur-4{-webkit-filter:blur(4px);}
+.z-filter-blur-5{-webkit-filter:blur(5px);}
+.z-filter-blur-10{-webkit-filter:blur(10px);}
+/**********线**************/
+.Z-hr{width:100%;height:1px;border:none;border-top:1px solid #ccc;}
+/**********溢出隐藏**************/
+.z-overflow-hidden{overflow:hidden;}
+/**********文字省略*************/
+.z-lines-2-overflow-hidden{
+	overflow : hidden;
+	text-overflow: ellipsis;
+	display: -webkit-box;
+	-webkit-line-clamp: 2;
+	-webkit-box-orient: vertical;
+}
+.z-lines-1-overflow-hidden{
+	overflow: hidden;
+	text-overflow:ellipsis;
+	white-space: nowrap;
+}
+.z-oneline-overflow-hidden{
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+/**********通用字体颜色*************/
+.z-color-fff{color:#fff;}
+.z-color-000{color:#000;}
+.z-color-222{color:#222;}
+.z-color-333{color:#333;}
+.z-color-666{color:#666;}
+.z-color-888{color:#888;}
+.z-color-999{color:#999;}
+.z-color-febe54{color:#febe54;}
+.z-color-FB966E{color:#FB966E;}
+.z-color-2bb0a6{color:#2bb0a6;}
+.z-color-ff8f81{color:#ff8f81;}
+.z-color-afafaf{color:#afafaf;}
+.z-color-565656{color:#565656;}
+.z-color-95d7d3{color:#95d7d3;}
+.z-color-c7c7c7{color:#c7c7c7;}
+.z-color-1bc6bf{color:#1bc6bf;}
+.z-color-red{color:#ff0000;}
+/**********通用背景颜色*************/
+.z-bg-color-000{background-color: #000}
+.z-bg-color-333{background-color: #333}
+.z-bg-color-eee{background-color: #eee}
+.z-bg-color-fff{background-color: #fff}
+.z-bg-color-f9f9f9{background-color: #f9f9f9}
+.z-bg-color-2bb0a6{background-color: #2bb0a6}
+.z-bg-color-1bc6bf{background-color: #1bc6bf}
+.z-bg-color-1E817C{background-color: #1E817C}
+.z-bg-color-red {background-color: #EC4A3D;}
+.z-bg-color-11b8ae {background-color: #11b8ae;}
+/**********手势*************/
+.z-curPonit{cursor:pointer;}
+.z-curZoomout{cursor:zoom-out}
+.z-curAuto{cursor:zoom-out}
+.z-grab{cursor:grab;cursor:-webkit-grab;cursor:-moz-grab;}
+/**********堆叠顺序*************/
+.z-index-9999{z-index: 9999}
+.z-index-1000{z-index: 1000}
+.z-index-500{z-index: 500}
+.z-index-200{z-index: 200}
+.z-index-9{z-index: 9}
+.z-index-4{z-index: 4}
+.z-index-3{z-index: 3}
+.z-index-2{z-index: 2}
+.z-index-1{z-index: 1}
