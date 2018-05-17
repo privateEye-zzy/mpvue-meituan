@@ -2,7 +2,7 @@
   <div class="container ub-box">
     <scroll-view scroll-y style="height:calc(100vh);" scroll-top="0">
       <dl class="z-width-100-percent ub-box ub-col">
-       <dd @click.stop="openWin('/pages/orderDetail/main')" v-for="(val, idx) in 12" :key="idx" class="order z-width-100-percent ub-box z-box-sizing-border">
+       <dd @click.stop="$openWin('/pages/orderDetail/main')" v-for="(val, idx) in 12" :key="idx" class="order z-width-100-percent ub-box z-box-sizing-border">
          <img class="z-img-cover" :src="order.img" />
          <div class="ub-flex-1 z-padding-left-10-px ub-box ub-col">
            <span class="z-font-size-15 z-color-333 z-margin-bottom-3-px z-font-weight-bold">{{order.name}}</span>
@@ -29,15 +29,9 @@
         }
       }
     },
-    methods: {
-      openWin(url) {
-        wx.navigateTo({url: url})
-      },
-    },
+    methods: {},
     onShow () {
       wx.setNavigationBarTitle({title: '订单列表'})
-      // wx.showLoading({title: '加载中...', mask: true})
-      // setTimeout(() => {wx.hideLoading()}, 1000)
     }
   }
 </script>

@@ -1,10 +1,15 @@
 import Vue from 'vue'
 import App from './App'
+import { openWin, backBeaforWin, Ajax } from "./utils/index"
 import './css/common.css'
 import './css/iconfont.css'
 
 Vue.config.productionTip = false
 App.mpType = 'app'
+// 挂载原型通用方法
+Vue.prototype.$openWin = openWin
+Vue.prototype.$backBeaforWin = backBeaforWin
+Vue.prototype.$ajax = Ajax
 
 const app = new Vue(App)
 app.$mount()

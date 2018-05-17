@@ -1,12 +1,12 @@
 <template>
   <div class="container ub-box ub-col">
     <dl class="ub-box ub-ver z-padding-v-10-px" style="background:#fff;">
-      <dd @click.stop="openWin('/pages/citySelect/main')" class="z-padding-h-10-px ub-box ub-ver">
+      <dd @click.stop="$openWin('/pages/citySelect/main')" class="z-padding-h-10-px ub-box ub-ver">
         <span class="z-font-size-14 z-color-666 z-margin-right-3-px">昆明</span>
          <i class="iconfont icon-xiangxiazhankai z-color-666 z-font-size-16"></i>
       </dd>
       <dd class="ub-flex-1 ub-box ub-ver">
-        <div @click.stop="openWin('/pages/search/main')" class="search ub-box ub-ver-v z-width-90-percent z-box-sizing-border">
+        <div @click.stop="$openWin('/pages/search/main')" class="search ub-box ub-ver-v z-width-90-percent z-box-sizing-border">
           <i class="iconfont icon-sousuo z-color-666 z-font-size-16"></i>
           <span class="z-font-size-12 z-color-999 z-margin-left-8-px">请输入商家名、品类或者商圈...</span>
         </div>
@@ -25,23 +25,23 @@
       <!--图标入口-->
       <dl class="ub-box ub-wrap z-padding-v-5-px" style="background:#fff">
         <div class="icon-item ub-box ub-col ub-ver" :key="key" v-for="(idx, key) in iconMap">
-          <dd @click.stop="openWin('/pages/error/main')" class="icon ub-box ub-ver iconfont" :class="key" :style="{background: iconMap[key]['bk']}"></dd>
+          <dd @click.stop="$openWin('/pages/error/main')" class="icon ub-box ub-ver iconfont" :class="key" :style="{background: iconMap[key]['bk']}"></dd>
           <span class="z-padding-v-8-px z-font-size-12 z-color-333">{{iconMap[key]['title']}}</span> 
         </div>
       </dl>
       <!--广告-->
       <dl class="ub-box ub-wrap z-margin-top-6-px z-padding-v-5-px" style="background:#fff">
-        <dd @click.stop="openWin('/pages/error/main')" class="adv ub-flex-1 z-box-sizing-border ub-box ub-ver ub-col">
+        <dd @click.stop="$openWin('/pages/error/main')" class="adv ub-flex-1 z-box-sizing-border ub-box ub-ver ub-col">
           <span class="z-font-size-14 z-lineHeight-36" style="color:#55a40f">我们约吧</span>
           <span class="z-font-size-12 z-color-666">恋人家人好朋友</span>
           <img class="z-img-cover" src="/static/images/index1.png">
         </dd>
-        <dd @click.stop="openWin('/pages/error/main')" class="adv ub-flex-1 z-box-sizing-border z-padding-v-5-px ub-box ub-ver ub-col">
+        <dd @click.stop="$openWin('/pages/error/main')" class="adv ub-flex-1 z-box-sizing-border z-padding-v-5-px ub-box ub-ver ub-col">
           <span class="z-font-size-14 z-lineHeight-36" style="color:#ff3f0d">低价超值</span>
           <span class="z-font-size-12 z-color-666">十元惠生活</span>
           <img class="z-img-cover" src="/static/images/index2.png">
         </dd>
-        <dd @click.stop="openWin('/pages/error/main')" class="adv ub-flex-1 z-box-sizing-border z-padding-v-5-px ub-box ub-ver ub-col">
+        <dd @click.stop="$openWin('/pages/error/main')" class="adv ub-flex-1 z-box-sizing-border z-padding-v-5-px ub-box ub-ver ub-col">
           <span class="z-font-size-14 z-lineHeight-36" style="color:#f742a0">午后时光</span>
           <span class="z-font-size-12 z-color-666">懒懒下午茶</span>
           <img class="z-img-cover" src="/static/images/index3.png">
@@ -85,11 +85,14 @@
       }
     },
     methods: {
-      openWin(url) {
-        wx.navigateTo({url: url})
+      async initAjax() {
+        let ret = await this.$ajax({url: 'https://devapi.ynshuke.com/v1/banners'})
+        console.log(ret)
       }
     },
-    created () {},
+    mounted() {
+      // this.initAjax()
+    },
     onPullDownRefresh() {
       console.log('onPullDownRefresh');
       setTimeout(() => {wx.stopPullDownRefresh()}, 600)

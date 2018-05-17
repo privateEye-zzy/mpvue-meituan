@@ -37,7 +37,7 @@
         <span class="z-font-size-12 z-color-999 z-margin-right-10-px">实付金额</span>
         <span class="z-font-size-18 z-font-weight-bold" style="color:red">¥{{formdata.totalPrice}}</span>
       </li>
-      <li @click.stop="openWin('/pages/error/main')" class="sumbitBtn ub-box ub-ver z-font-size-16 z-color-fff">提交订单</li>
+      <li @click.stop="$openWin('/pages/error/main')" class="sumbitBtn ub-box ub-ver z-font-size-16 z-color-fff">提交订单</li>
     </ul>
    </dl>
   </div>
@@ -59,9 +59,6 @@
       }
     },
     methods: {
-      openWin(url) {
-        wx.navigateTo({url: url})
-      },
       counterService(n) {
         this.formdata.num = n
         this.formdata.totalPrice = (this.formdata.price|0) * n

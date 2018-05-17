@@ -16,7 +16,7 @@
 				<span class="z-font-size-13 z-color-888">门市价：¥{{normalPrice}}</span>
 			</p>
 			<p class="ub-box ub-ver">
-				<span @click.stop="openWin('/pages/submit/main')" class="buyBtn ub-box ub-ver z-font-size-16 z-color-fff">
+				<span @click.stop="$openWin('/pages/submit/main')" class="buyBtn ub-box ub-ver z-font-size-16 z-color-fff">
 					立即抢购
 				</span>
 			</p>
@@ -37,7 +37,7 @@
 					<star></star>
 				</span>
 			</p>
-			<p @click.stop="openWin('/pages/comment/main')" class="ub-box ub-ver">
+			<p @click.stop="$openWin('/pages/comment/main')" class="ub-box ub-ver">
 				<span class="z-font-size-13 z-color-888">{{commentsNum}}条评论</span>
 				<i class="iconfont icon-xiayiyeqianjinchakangengduo z-font-size-12 z-color-888"></i>
 			</p>
@@ -94,7 +94,7 @@
 					<star></star>
 				</span>
 			</p>
-			<p @click.stop="openWin('/pages/comment/main')" class="ub-box ub-ver">
+			<p @click.stop="$openWin('/pages/comment/main')" class="ub-box ub-ver">
 				<span class="z-font-size-14 z-color-888">{{commentsNum}}条评论</span>
 				<i class="iconfont icon-xiayiyeqianjinchakangengduo z-font-size-12 z-color-888"></i>
 			</p>
@@ -106,7 +106,7 @@
 				</li>
 			</ul>
 		</dd>
-		<dd @click.stop="openWin('/pages/comment/main')" class="z-width-100-percent z-box-sizing-border z-bg-color-fff z-padding-h-8-px ub-box ub-between">
+		<dd @click.stop="$openWin('/pages/comment/main')" class="z-width-100-percent z-box-sizing-border z-bg-color-fff z-padding-h-8-px ub-box ub-between">
 			<p class="z-margin-bottom-8-px ub-box ub-ver">
 				<span style="color:#06c1ae" class="z-font-size-14 z-color-888">查看全部用户评价</span>
 			</p>
@@ -207,9 +207,6 @@
 			}
 		},
 		methods: {
-			openWin(url) {
-        		wx.navigateTo({url: url})
-      		},
 			previewImage(imgs=[], curIdx=0){
 				wx.previewImage({current: imgs[curIdx], urls: imgs})
 			},

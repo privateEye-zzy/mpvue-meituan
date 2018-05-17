@@ -6,7 +6,7 @@
           <i class="iconfont icon-sousuo z-color-666 z-font-size-16"></i>
           <input class="ub-flex-1 z-font-size-14 z-color-666 z-padding-v-5-px z-margin-left-8-px" placeholder="保利国际影院"/>
         </div>
-        <span @click.stop="back()" class="z-font-size-13 z-margin-left-8-px" style="color:#06c1ae">取消</span>
+        <span @click.stop="$backBeaforWin()" class="z-font-size-13 z-margin-left-8-px" style="color:#06c1ae">取消</span>
       </dd>
       <dd class="z-margin-top-8-px z-width-100-percent z-box-sizing-border z-bg-color-fff z-padding-all-8-px ub-box">
         <p class="z-font-size-14 z-color-888">猜你想找</p>
@@ -43,11 +43,7 @@
         ]
       }
     },
-    methods: {
-      back () {
-        wx.navigateBack({delta: 1})
-      }
-    },
+    methods: {},
     onShow() {
       wx.setNavigationBarTitle({title: '搜索'})
     }
