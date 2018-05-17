@@ -68,7 +68,7 @@
     data () {
       return {
         curIdx: 0,
-        tabs: ['全部', '晒图', '低分', '最新'],
+        tabs: [],
         allComments: [
             {
               header: 'https://img.meituan.net/avatar/855458f5c24ab19951f382ee99533ad981495.jpg@37w_37h_1e_1c',
@@ -142,18 +142,20 @@
         this.curIdx = i
       },
       initAllComments(){
+        // 从全集过滤出有图片的集合
         this.hasImgComments = this.allComments.filter(item => {
           if(item.imgs.length > 0) return item
         })
+        // 从全集过滤出分数小于3的集合
         this.lowScoreComments = this.allComments.filter(item => {
           if((item.star|0) < 3) return item
         })
         this.curIdx = 0
-        this.tabs = ['全部', '晒图', '低分', '最新']
-        this.tabs[0] += '（' + this.allComments.length + '）'
-        this.tabs[1] += '（' + this.hasImgComments.length + '）'
-        this.tabs[2] += '（' + this.lowScoreComments.length + '）'
-        this.tabs[3] += '（' + this.lastComments.length + '）'
+        this.tabs = new Array(4)
+        this.tabs[0] = '全部（' + this.allComments.length + '）'
+        this.tabs[1] = '晒图（' + this.hasImgComments.length + '）'
+        this.tabs[2] = '低分（' + this.lowScoreComments.length + '）'
+        this.tabs[3] = '最新（' + this.lastComments.length + '）'
       },
     },
     mounted() {

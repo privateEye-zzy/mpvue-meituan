@@ -44,7 +44,7 @@
     data () {
       return {}
     },
-    onLoad(){},
+    mounted() {},
     methods: {
       previewImage(imgs=[], curIdx=0){
         wx.previewImage({current: imgs[curIdx], urls: imgs})

@@ -1,6 +1,6 @@
 <template>
   <div class="container ub-box ub-col">
-   <city></city>
+   <city @cityService="cityService"></city>
   </div>
 </template>
 <script>
@@ -10,7 +10,13 @@
     data () {
       return {}
     },
-    methods: {},
+    methods: {
+      cityService(city) {
+        // 更新Vuex state中的curCity
+        this.$store.commit('updateCity', city)
+        this.$backBeaforWin()
+      }
+    },
     onShow() {
       wx.setNavigationBarTitle({title: '选择城市'})
     }

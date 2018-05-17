@@ -23,7 +23,7 @@
       	currArrNum: [100, 100, 100, 100, 100],
       }
     },
-    onLoad(){
+    mounted() {
     	this.calcArrNum()
     },
     methods: {

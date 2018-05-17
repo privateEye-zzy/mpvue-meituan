@@ -14,7 +14,7 @@
       	num: 1,
       }
     },
-    onLoad(){},
+    mounted() {},
     methods: {
       changeNum(type) {
         if (this.num === 1 && type === -1) return

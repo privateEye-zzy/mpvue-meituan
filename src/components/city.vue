@@ -16,7 +16,7 @@
         </dd>
         <dd class="z-width-100-percent z-bg-color-fff ub-box">
           <ul class="ub-box ub-wrap z-padding-all-8-px">
-            <li v-for="(val, idx) in visitCityList" :key="idx" class="hotcity z-font-size-14 z-color-333">{{val.name}}</li>
+            <li @click.stop="clickCity(city)" v-for="(city, idx) in visitCityList" :key="idx" class="hotcity z-font-size-14 z-color-333">{{city.name}}</li>
           </ul>
         </dd>
         <dd class="z-width-100-percent z-bg-color-fff ub-box">
@@ -24,7 +24,7 @@
         </dd>
         <dd class="z-width-100-percent z-bg-color-fff ub-box">
           <ul class="ub-box ub-wrap z-padding-all-8-px">
-            <li v-for="(val, idx) in hotCityList" :key="idx" class="hotcity z-font-size-14 z-color-333">{{val.name}}</li>
+            <li @click.stop="clickCity(city)" v-for="(city, idx) in hotCityList" :key="idx" class="hotcity z-font-size-14 z-color-333">{{city.name}}</li>
           </ul>
         </dd>
         <dd class="z-width-100-percent z-bg-color-fff ub-box">
@@ -72,7 +72,7 @@
         selectCity: {},
       }
     },
-    onLoad() {
+    mounted() {
       this.initCityList()
     },
     methods: {
@@ -84,7 +84,7 @@
         this.currView = obj.initial
       },
       clickCity(city) {
-        // this.selectCity = city
+        this.$emit('cityService', city.name)
       }
     },
   }
