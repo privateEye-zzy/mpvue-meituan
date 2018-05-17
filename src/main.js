@@ -1,6 +1,6 @@
 import Vue from 'vue'
 import App from './App'
-import { openWin, backBeaforWin, Ajax } from './utils/index'
+import { openWin, backBeaforWin, Ajax } from './utils/common'
 import store from './utils/store'
 import './css/common.css'
 import './css/iconfont.css'

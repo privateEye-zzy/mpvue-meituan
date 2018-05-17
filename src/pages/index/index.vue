@@ -53,16 +53,16 @@
           <span class="z-font-size-12 z-color-888 z-lineHeight-36">—猜你喜欢—</span>
         </p>
         <dd class="ub-box ub-col">
-          <card v-for="(val, idx) in 7" :key="idx" :isLast="idx==6"></card>
+          <good v-for="(val, idx) in 7" :key="idx" :isLast="idx==6"></good>
         </dd>
       </dl>
     </scroll-view>
   </div>
 </template>
 <script>
-  import card from "../../components/card.vue"
+  import good from "../../components/good.vue"
   export default {
-    components: {card},
+    components: {good},
     computed: {
       curCity () {
         return this.$store.state.curCity

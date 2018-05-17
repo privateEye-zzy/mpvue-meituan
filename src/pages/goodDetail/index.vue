@@ -118,18 +118,18 @@
 			<p class="z-font-size-14 z-color-888">相关推荐</p>
 		</dd>
 		<dd class="z-width-100-percent z-box-sizing-border z-bg-color-fff z-padding-all-8-px ub-box ub-col">
-        	<card v-for="(val, idx) in 2" :key="idx" :isLast="idx==1"></card>
+        	<good v-for="(val, idx) in 2" :key="idx" :isLast="idx==1"></good>
         </dd>								
 	  </dl>
 	</scroll-view>
   </div>
 </template>
 <script>
-	import card from "../../components/card.vue"
+	import good from "../../components/good.vue"
 	import star from "../../components/star.vue"
 	import comment from "../../components/comment.vue"
 	export default {
-		components: {card, star, comment},
+		components: {good, star, comment},
 	  	data () {
 			return {
 				indexImg: 'http://p0.meituan.net/deal/522fd16a9b25479496188b59476d1b941062402.jpg',
