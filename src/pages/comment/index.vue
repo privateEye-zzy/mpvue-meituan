@@ -1,10 +1,10 @@
 <template>
   <div class="container">
-    <!--tab栏-->
+    <!--评论类型tab栏-->
     <dl class="z-width-100-percent ub-box z-box-sizing-border">
       <dd @click.stop="clickTab(idx)" v-for="(val, idx) in tabs" :key="idx" :class="{'on': curIdx==idx}" class="ub-flex-1 ub-box ub-ver swiper-item z-box-sizing-border z-font-size-14 z-color-666 z-padding-v-10-px">{{val}}</dd>
     </dl>
-    <!--tab内容-->
+    <!--相应评论类型的tab内容-->
     <swiper :current="curIdx" class="swiper-box" duration="300" style="height:calc(100vh - 30px)" @change="bindchange">
       <!--全部评论-->
       <swiper-item item-id="t1">
@@ -141,14 +141,24 @@
         if (this.curIdx === i) return
         this.curIdx = i
       },
+      // 比较日期是否在当前日期的recently范围之间
+      compareDateToNow(time) {
+        const compare = new Date(time.replace(/-/g,'\/')).getTime()
+        const recently = 86400000 * 3 // 定义三天之内
+        return new Date().getTime() - recently <= compare
+      },
       initAllComments(){
-        // 从全集过滤出有图片的集合
+        // 晒图评论类型：从全集过滤出有图片的集合
         this.hasImgComments = this.allComments.filter(item => {
           if(item.imgs.length > 0) return item
         })
-        // 从全集过滤出分数小于3的集合
+        // 低分评论类型：从全集过滤出分数小于3的集合
         this.lowScoreComments = this.allComments.filter(item => {
           if((item.star|0) < 3) return item
+        })
+        // 最新评论类型：从全集过滤出3天之内的集合
+        this.lastComments = this.allComments.filter(item => {
+          if(this.compareDateToNow(item.time)) return item
         })
         this.curIdx = 0
         this.tabs = new Array(4)

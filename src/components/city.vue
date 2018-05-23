@@ -52,7 +52,7 @@
   export default {
     data () {
       return {
-        currView: 'cc',
+        currView: '',
         visitCityList: [
           {zip: "010", name: "北京"},
           {zip: "021", name: "上海"},
@@ -72,8 +72,9 @@
         selectCity: {},
       }
     },
-    mounted() {
+    onLoad() {
       this.initCityList()
+      this.currView = ''
     },
     methods: {
       initCityList() {
