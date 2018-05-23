@@ -8,11 +8,12 @@
       <dd class="ub-flex-1 ub-box ub-ver">
         <div @click.stop="$openWin('/pages/search/main')" class="search ub-box ub-ver-v z-width-90-percent z-box-sizing-border">
           <i class="iconfont icon-sousuo z-color-666 z-font-size-16"></i>
-          <span class="z-font-size-12 z-color-999 z-margin-left-8-px">请输入商家名、品类或者商圈...</span>
+          <span class="z-font-size-14 z-color-999 z-margin-left-8-px">请输入商家名、品类或者商圈...</span>
         </div>
       </dd>
     </dl>
     <scroll-view scroll-y style="height: calc(100vh - 50px);" scroll-top="0">
+      <!--轮播图-->
       <div class="ub-box ub-ver z-bg-color-fff">
         <swiper class="swiper" indicator-dots="false" autoplay="false" interval="5000" duration="500">
           <block v-for="(item, idx) in imgUrls" :key="idx">
@@ -22,7 +23,7 @@
           </block>
         </swiper>
       </div>
-      <!--图标入口-->
+      <!--图标九宫格入口-->
       <dl class="ub-box ub-wrap z-padding-v-5-px" style="background:#fff">
         <div class="icon-item ub-box ub-col ub-ver" :key="key" v-for="(idx, key) in iconMap">
           <dd @click.stop="$openWin('/pages/error/main')" class="icon ub-box ub-ver iconfont" :class="key" :style="{background: iconMap[key]['bk']}"></dd>
@@ -47,13 +48,13 @@
           <img class="z-img-cover" src="/static/images/index3.png">
         </dd>
       </dl>
-      <!--猜你喜欢-->
+      <!--猜你喜欢，商品列表-->
       <dl class="ub-box ub-col z-margin-top-6-px z-padding-all-8-px" style="background:#fff">
         <p class="z-width-100-percent ub-box ub-ver" style="border-bottom:1px solid #eee">
           <span class="z-font-size-12 z-color-888 z-lineHeight-36">—猜你喜欢—</span>
         </p>
         <dd class="ub-box ub-col">
-          <good v-for="(val, idx) in 7" :key="idx" :isLast="idx==6"></good>
+          <good v-for="(val, idx) in 7" :key="idx" :isLast="idx===6"></good>
         </dd>
       </dl>
     </scroll-view>

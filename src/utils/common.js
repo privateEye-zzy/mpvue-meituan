@@ -42,6 +42,10 @@ export function Ajax (opts, cb=function(){}) {
 export function openWin (url) {
   wx.navigateTo({url: url})
 }
+// 关闭当前页面，跳转到应用内的某个页面
+export function redirectTo (url) {
+  wx.redirectTo({url: url})
+}
 // 返回上一级窗口
 export function backBeaforWin () {
   wx.navigateBack({delta: 1})

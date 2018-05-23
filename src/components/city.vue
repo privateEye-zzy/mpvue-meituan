@@ -41,10 +41,10 @@
       </dl>
     </scroll-view>
     <!--fixed部分-->
-      <dl class="fixList ub-box ub-col ub-ver-v">
-        <dt class="z-font-size-12 z-margin-bottom-3-px" style="color:#06c1ae">最近热门</dt>
-        <dd @click.stop="clickCode(val)" v-for="(val, idx) in cityList" :key="idx" class="z-font-size-12" style="margin-bottom:2px;color:#06c1ae;padding:0 50px;">{{val.initial}}</dd>
-      </dl>
+    <dl class="fixList ub-box ub-col ub-ver-v">
+      <dt class="z-font-size-12 z-margin-bottom-3-px" style="color:#06c1ae">最近热门</dt>
+      <dd @click.stop="clickCode(val)" v-for="(val, idx) in cityList" :key="idx" class="z-font-size-12" style="margin-bottom:2px;color:#06c1ae;padding:0 50px;">{{val.initial}}</dd>
+    </dl>
 	</div>
 </template>
 <script>
