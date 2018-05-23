@@ -9,7 +9,7 @@
            <span class="z-font-size-12 z-color-888 z-margin-bottom-3-px">数量：{{order.num}}</span>
            <span class="z-font-size-12 z-color-888 z-margin-bottom-3-px">总价：{{order.price}}</span>
          </div>
-         <span class="z-font-size-12" style="color:#06c1ae">{{order.type}}</span>
+         <span class="z-font-size-14" style="color:#06c1ae">{{order.type}}</span>
        </dd>
      </dl>
     </scroll-view>
@@ -25,7 +25,7 @@
           name: '索菲特大酒店锦厨国际餐厅自助餐',
           num: '1',
           price: '308',
-          type: '代评价'
+          type: '待评价'
         }
       }
     },
@@ -38,5 +38,5 @@
 <style scoped>
   .container{width:100%;height:100vh;background:#fff}
   .order{border-bottom: 1px solid #f5f5f5;padding: 10px 8px;}
-  .order img{width: 45px; height: 45px; border-radius: 3px}
+  .order img{width: 55px; height: 55px; border-radius: 3px}
 </style>
